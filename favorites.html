@@ -1,0 +1,255 @@
+<!-- --------------
+   LIKED PAGE
+   Zhamila
+--------------- --> 
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Favorites | CINEPULSE</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body class="favorites-page">
+
+    <img src="images/mask1.PNG" class="page-mask">
+
+
+    <!-- HEADER -->
+
+    <header class="favorites-header">
+
+        <div class="favorites-logo">
+            CINEPULSE
+        </div>
+
+        <nav class="favorites-nav">
+
+            <a href="index.html">Home</a>
+
+            <a href="catalog.html">Catalog</a>
+
+            <a href="watch-later.html">Watch Later</a>
+
+            <a href="favorites.html" class="active">
+                Favorites
+            </a>
+
+        </nav>
+
+        <button class="favorites-login" type="button">
+            LOG IN
+        </button>
+
+    </header>
+
+
+    <!-- MAIN -->
+
+    <main class="favorites-container">
+
+
+        <h1 class="favorites-title">
+            MY FAVORITES
+        </h1>
+
+
+        <!-- FAVORITE MOVIES -->
+
+        <h2 class="favorites-section-title">
+            FAVORITE MOVIES
+        </h2>
+
+
+        <table class="favorites-table">
+
+            <thead>
+
+                <tr>
+                    <th>TITLE</th>
+                    <th>GENRE</th>
+                    <th>YEAR</th>
+                </tr>
+
+            </thead>
+
+
+            <tbody id="favorite-table">
+
+            </tbody>
+
+        </table>
+
+
+
+        <!-- ABOUT DEVELOPER -->
+
+        <section class="favorites-about">
+
+            <h2>
+                ABOUT THE DEVELOPER
+            </h2>
+
+            <p>
+                Hi! I'm Zhamila Bapan, a Software Engineering student
+                at Astana IT University (Group SE-2506).
+                I developed the Home, Catalog and Favorites sections for this movie platform.
+            </p>
+
+        </section>
+
+
+
+        <!-- CONTACT FORM -->
+
+        <section class="favorites-form-box">
+
+            <h2>
+                SUGGEST A MOVIE / CONTACT US
+            </h2>
+
+
+            <form id="contact-form">
+
+
+                <label for="username">
+                    Your Name
+                </label>
+
+                <input
+                    type="text"
+                    id="username"
+                    placeholder="Enter your full name"
+                    required
+                >
+
+
+
+                <label for="email">
+                    Your Email
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="example@mail.com"
+                    required
+                >
+
+
+
+                <label for="color">
+                    Select Highlight Color
+                </label>
+
+                <input
+                    type="color"
+                    id="color"
+                    value="#e50932"
+                >
+
+
+
+                <label for="genre">
+                    Genre Category
+                </label>
+
+                <select id="genre">
+
+                    <option>Horror</option>
+
+                    <option>Sci-Fi</option>
+
+                    <option>Action</option>
+
+                    <option>Drama</option>
+
+                </select>
+
+
+
+                <label for="message">
+                    Message / Movie Suggestion
+                </label>
+
+                <textarea
+                    id="message"
+                    rows="4"
+                    placeholder="Type movie title or review request..."
+                ></textarea>
+
+
+
+                <button type="submit" class="favorites-submit">
+                    SUBMIT REQUEST
+                </button>
+
+
+            </form>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer class="site-footer">
+
+        <div class="footer-left">
+            <span class="footer-dot"></span>
+            <p>MOVIE PROJECT</p>
+        </div>
+
+        <p class="footer-right">
+            CREATED BY ZHAMILA BAPAN & DARINA SAGIYEVA
+        </p>
+
+    </footer>
+
+
+    <script>
+
+        let movies =
+            JSON.parse(localStorage.getItem("favorites")) || [];
+
+
+        let table =
+            document.getElementById("favorite-table");
+
+
+        for (let i = 0; i < movies.length; i++) {
+
+            table.innerHTML += `
+                <tr>
+                    <td>${movies[i].title}</td>
+                    <td>${movies[i].genre}</td>
+                    <td>${movies[i].year}</td>
+                </tr>
+            `;
+
+        }
+
+
+        document
+            .getElementById("contact-form")
+            .addEventListener("submit", function(event) {
+
+                event.preventDefault();
+
+            });
+
+    </script>
+
+
+</body>
+
+</html>

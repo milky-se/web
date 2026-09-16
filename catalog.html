@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog | CINEPULSE</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <img src="images/mask1.PNG" class="page-mask">
+
+    <!-- Header Navigation -->
+    <header id="main-header">
+
+        <div class="logo">CINEPULSE</div>
+
+        <nav class="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="catalog.html" class="active">Catalog</a>
+            <a href="watch-later.html">Watch Later</a>
+            <a href="favorites.html">Favorites</a>
+        </nav>
+
+        <button class="btn-pill" type="button">LOG IN</button>
+
+    </header>
+
+    <main class="container">
+        <!-- Genre (ACTION) -->
+        <section class="genre-tags">
+            <span class="tag">ADVENTURE</span>
+            <span class="tag">ROMANTIC</span>
+            <span class="tag">FANTASY</span>
+            <span class="tag active-tag">ACTION</span>
+            <span class="tag">HORROR</span>
+            <span class="tag">COMEDY</span>
+        </section>
+
+        <!-- Movie Section -->
+        <section class="catalog-section">
+            <div class="section-title">RECOMMENDED | TOP MOVIES</div>
+
+            <div class="movie-card">
+                <img src="images/interstellar.jpg" alt="Interstellar">
+
+                <h3>Interstellar</h3>
+                <p>2014 • 2h 49m</p>
+
+                <div class="movie-buttons">
+                    <button onclick="saveMovie('favorites', 'Interstellar', '2014', 'Sci-Fi / Drama')">♡</button>
+                    <button onclick="saveMovie('watchLater', 'Interstellar', '2014', 'Sci-Fi / Drama')">◷</button>
+                </div>
+            </div>
+
+            <div class="movie-card">
+                <img src="images/inception.jpg" alt="Inception">
+
+                <h3>Inception</h3>
+                <p>2010 • 2h 28m</p>
+
+                <div class="movie-buttons">
+                    <button onclick="saveMovie('favorites', 'Inception', '2010', 'Action / Sci-Fi')">♡</button>
+                    <button onclick="saveMovie('watchLater', 'Inception', '2010', 'Action / Sci-Fi')">◷</button>
+                </div>
+            </div>
+
+            <div class="movie-card">
+                <img src="images/dune.jpg" alt="Dune Part Two">
+
+                <h3>Dune: Part Two</h3>
+                <p>2024 • 2h 46m</p>
+
+                <div class="movie-buttons">
+                    <button onclick="saveMovie('favorites', 'Dune: Part Two', '2024', 'Sci-Fi / Adventure')">♡</button>
+                    <button onclick="saveMovie('watchLater', 'Dune: Part Two', '2024', 'Sci-Fi / Adventure')">◷</button>
+                </div>
+            </div>
+
+            <div class="movie-card">
+                <img src="images/oppenheimer.jpg" alt="Oppenheimer">
+
+                <h3>Oppenheimer</h3>
+                <p>2023 • 3h</p>
+
+                <div class="movie-buttons">
+                    <button onclick="saveMovie('favorites', 'Oppenheimer', '2023', 'Drama / History')">♡</button>
+                    <button onclick="saveMovie('watchLater', 'Oppenheimer', '2023', 'Drama / History')">◷</button>
+                </div>
+            </div>
+
+            <div class="movie-card">
+                <img src="images/the-batman.jpg" alt="The Batman">
+
+                <h3>The Batman</h3>
+                <p>2022 • 2h 56m</p>
+
+                <div class="movie-buttons">
+                    <button onclick="saveMovie('favorites', 'The Batman', '2022', 'Action / Crime')">♡</button>
+                    <button onclick="saveMovie('watchLater', 'The Batman', '2022', 'Action / Crime')">◷</button>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Data TABLE Section -->
+        <section class="table-section">
+            <h2 class="sub-title">ALL AVAILABLE REVIEWS</h2>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>TITLE</th>
+                        <th>GENRE</th>
+                        <th>YEAR</th>
+                        <th>RATING</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>The Dark Knight</td>
+                        <td>Action / Crime</td>
+                        <td>2008</td>
+                        <td><span class="badge">9.0</span></td>
+                    </tr>
+                    <tr>
+                        <td>Interstellar</td>
+                        <td>Sci-Fi / Drama</td>
+                        <td>2014</td>
+                        <td><span class="badge">8.7</span></td>
+                    </tr>
+                    <tr>
+                        <td>Inception</td>
+                        <td>Action / Sci-Fi</td>
+                        <td>2010</td>
+                        <td><span class="badge">9.1</span></td>
+                    </tr>
+                </tbody>
+            </table> 
+        </section> 
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+
+        <div class="footer-left">
+            <span class="footer-dot"></span>
+            <p>MOVIE PROJECT</p>
+        </div>
+
+        <p class="footer-right">
+            CREATED BY ZHAMILA BAPAN & DARINA SAGIYEVA
+        </p>
+
+    </footer>
+
+<script>
+function saveMovie(listName, title, year, genre) {
+    let movies = JSON.parse(localStorage.getItem(listName)) || [];
+    let exists = movies.some(function(movie) {
+        return movie.title === title;
+    });
+
+    if (!exists) {
+        movies.push({
+            title: title,
+            year: year,
+            genre: genre
+        });
+    }
+
+    localStorage.setItem(listName, JSON.stringify(movies));
+}
+</script>    
+
+</body>
+</html>
+

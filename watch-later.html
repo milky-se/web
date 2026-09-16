@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch Later | CINEPULSE</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <img src="images/mask1.PNG" class="page-mask">
+
+
+    <!-- Header Navigation -->
+    <header id="main-header">
+
+        <div class="logo">CINEPULSE</div>
+
+        <nav class="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="catalog.html">Catalog</a>
+            <a href="watch-later.html" class="active">Watch Later</a>
+            <a href="favorites.html">Favorites</a>
+        </nav>
+
+        <button class="btn-pill" type="button">LOG IN</button>
+
+    </header>
+
+    <main class="container">
+        <h1 class="page-title">MY WATCH LATER LIST</h1>
+
+        <!-- Lists -->
+        <section class="lists-box">
+            <div class="list-column">
+                <h2>Priority Watchlist</h2>
+                <ol class="custom-list">
+                    <li>Dune: Part Two (Review)</li>
+                    <li>The Last of Us Season 2</li>
+                    <li>Oppenheimer Analysis</li>
+                </ol>
+            </div>
+
+            <div class="list-column">
+                <h2>Categories</h2>
+                <ul class="custom-list">
+                    <li>Horror Night Picks</li>
+                    <li>Sci-Fi Masterpieces</li>
+                    <li>Director's Cut Reviews</li>
+                </ul>
+            </div>
+        </section>
+
+
+        <h2 class="section-title">SAVED MOVIES</h2>
+
+
+        <table class="data-table">
+            <thead>
+            <tr>
+                <th>TITLE</th>
+                <th>GENRE</th>
+                <th>YEAR</th>
+            </tr>
+            </thead>
+
+            <tbody id="movie-table">
+            </tbody>
+        </table>
+        
+        <section class="author-section">
+            <div class="author-bio">
+                <h2>ABOUT THE DEVELOPER</h2>
+                <p>Hi! I'm Darina Sagiyeva, a Software Engineering student 
+                    at Astana IT University (Group SE-2506). I developed 
+                    the Catalog and Watch Later sections for this movie platform.</p>
+            </div>
+        </section>
+      
+
+
+        <section class="form-box">
+            <h2>SUGGEST A MOVIE / CONTACT US</h2>
+            <form id="contact-form">
+                <label for="username">Your Name</label>
+                <input type="text" id="username" name="username" placeholder="Enter your full name" required>
+
+                <label for="user-email">Your Email</label>
+                <input type="email" id="user-email" name="user-email" placeholder="example@mail.com" required>
+
+                <label for="fav-color">Select Highlight Color</label>
+                <input type="color" id="fav-color" name="fav-color" value="#d90429">
+
+                <label for="category">Genre Category</label>
+                <select id="category" name="category">
+                    <option value="horror">Horror</option>
+                    <option value="scifi">Sci-Fi</option>
+                    <option value="action">Action</option>
+                </select>
+
+                <label for="message">Message / Movie Suggestion</label>
+                <textarea id="message" name="message" rows="4" placeholder="Type movie title or review request..."></textarea>
+
+                <button type="submit" class="btn-submit">SUBMIT REQUEST</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+
+        <div class="footer-left">
+            <span class="footer-dot"></span>
+            <p>MOVIE PROJECT</p>
+        </div>
+
+        <p class="footer-right">
+            CREATED BY ZHAMILA BAPAN & DARINA SAGIYEVA
+        </p>
+
+    </footer>
+
+    <script>
+    let movies = JSON.parse(localStorage.getItem("watchLater")) || [];
+    let table = document.getElementById("movie-table");
+
+    for (let i = 0; i < movies.length; i++) {
+        table.innerHTML += `
+            <tr>
+                <td>${movies[i].title}</td>
+                <td>${movies[i].genre}</td>
+                <td>${movies[i].year}</td>
+            </tr>
+        `;
+    }
+
+    </script>
+
+</body>
+</html>
