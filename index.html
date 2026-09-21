@@ -1,102 +1,70 @@
-<!-- ------------------------
-     HOME PAGE
-     Zhamila
-------------------------- -->
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Home | Movie Website</title>
-
+    <title>Home | MOVIE PROJECT</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body class="home-page">
+    <div class="grid-container">
+        <!-- HEADER (FLEXBOX - TASK 1) -->
+        <header id="main-header">
+            <div class="logo">MOVIE PROJECT</div>
+            <nav class="nav-menu">
+                <a href="index.html" class="active">Home</a>
+                <a href="catalog.html">Catalog</a>
+                <a href="watch-later.html">Watch Later</a>
+                <a href="favorites.html">Favorites</a>
+            </nav>
+            <div class="user-action">
+                <button class="btn-pill" type="button">LOG IN</button>
+            </div>
+        </header>
 
-    <main class="home">
+        <!-- SIDEBAR (GRID AREA - TASK 3) -->
+        <aside class="site-sidebar">
+            <h3>NAVIGATION</h3>
+            <br>
+            <p><a href="index.html" style="color: #a5a2a2; text-decoration: none;">• Home Overview</a></p><br>
+            <p><a href="catalog.html" style="color: #a5a2a2; text-decoration: none;">• Explore Movies</a></p>
+        </aside>
 
-        <!-- MASKS -->
+        <!-- MAIN CONTENT (GRID AREA - TASK 3) -->
+        <main class="home-container">
+            <!-- МАСКИ буууу страшшнаа-->
+            <div class="masks-container">
+                <img src="images/mask1.png" class="mask" alt="Theatre mask 1">
+                <img src="images/mask2.png" class="mask" alt="Theatre mask 2">
+                <img src="images/mask3.png" class="mask" alt="Theatre mask 3">
+                <img src="images/mask4.png" class="mask" alt="Theatre mask 4">
+                <img src="images/mask5.png" class="mask" alt="Theatre mask 5">
+            </div>
 
-        <img src="images/mask1.png" class="mask mask1" alt="Theatre mask">
-        <img src="images/mask2.png" class="mask mask2" alt="Theatre mask">
-        <img src="images/mask3.png" class="mask mask3" alt="Theatre mask">
-        <img src="images/mask4.png" class="mask mask4" alt="Theatre mask">
-        <img src="images/mask5.png" class="mask mask5" alt="Theatre mask">
+            <!-- HERO SECTION -->
+            <section class="hero-content">
+                <p class="hero-subtitle">YOUR PERSONAL MOVIE SPACE</p>
+                <h1 class="hero-title">
+                    WATCH AND<br>
+                    ENJOY THE<br>
+                    <span class="highlight">MOVIES.</span>
+                </h1>
+                <p class="hero-description">
+                    Discover the movie that will become your favorite. Explore popular films, classics, 
+                    and true cinematic gems right here. Search by title or genre, discover new stories, 
+                    and save the movies you like. Find something worth watching.
+                </p>
+            </section>
+        </main>
 
-
-        <!-- HERO -->
-
-        <section class="hero">
-
-            <p class="hero-small">YOUR PERSONAL MOVIE SPACE</p>
-
-            <h1>
-                WATCH AND<br>
-                ENJOY THE<br>
-                <span>MOVIES.</span>
-            </h1>
-
-            <p class="hero-description">
-                Discover the movie that will become your favorite. Explore popular films, classics, 
-                and true cinematic gems right here. Search by title or genre, discover new stories, 
-                and save the movies you like.Find something worth watching.
-            </p>
-
-        </section>
-
-
-        <!-- MENU -->
-
-        <nav class="side-menu">
-
-            <a href="index.html" class="active">
-                HOME
-            </a>
-
-            <a href="catalog.html">
-                EXPLORE MOVIES
-            </a>
-
-            <a href="watch-later.html">
-                WATCH LATER
-            </a>
-
-            <a href="favorites.html">
-                FAVORITES
-            </a>
-
-        </nav>
-
-
-        <!-- мини текст шетте -->
-
-        <div class="side-text">
-            FILMS / STORIES / EMOTIONS
-        </div>
-
-    </main>
-
-
-    <!-- FOOTER -->
-
-    <footer class="site-footer">
-
-        <div class="footer-left">
-            <span class="footer-dot"></span>
-            <p>MOVIE PROJECT</p>
-        </div>
-
-        <p class="footer-right">
-            CREATED BY ZHAMILA BAPAN & DARINA SAGIYEVA
-        </p>
-
-    </footer>
-
-
+        <!-- FOOTER (GRID AREA - TASK 3) -->
+        <footer class="site-footer">
+            <div class="footer-left">
+                <span class="footer-dot"></span>
+                <p>MOVIE PROJECT</p>
+            </div>
+            <p class="footer-right">CREATED BY ZHAMILA BAPAN & DARINA SAGIYEVA</p>
+        </footer>
+    </div>
 </body>
-
 </html>

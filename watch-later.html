@@ -3,127 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Watch Later | CINEPULSE</title>
+    <title>Watch Later | MOVIE PROJECT</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div class="grid-container">
+        <!-- HEADER (FLEXBOX - TASK 1) -->
+        <header id="main-header">
+            <div class="logo">MOVIE PROJECT</div>
+            <nav class="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="catalog.html">Catalog</a>
+                <a href="watch-later.html" class="active">Watch Later</a>
+                <a href="favorites.html">Favorites</a>
+            </nav>
+            <button class="btn-pill" type="button">LOG IN</button>
+        </header>
 
-    <img src="images/mask1.png" class="page-mask">
+        <!-- SIDEBAR (TASK 3) -->
+        <aside class="site-sidebar">
+            <h3>USER MENU</h3>
+            <br>
+            <p><a href="watch-later.html" style="color: #ff7980;">• Watch Later List</a></p><br>
+            <p><a href="favorites.html" style="color: #ccc;">• Favorites</a></p>
+        </aside>
 
-
-    <!-- Header Navigation -->
-    <header id="main-header">
-
-        <div class="logo">CINEPULSE</div>
-
-        <nav class="nav-menu">
-            <a href="index.html">Home</a>
-            <a href="catalog.html">Catalog</a>
-            <a href="watch-later.html" class="active">Watch Later</a>
-            <a href="favorites.html">Favorites</a>
-        </nav>
-
-        <button class="btn-pill" type="button">LOG IN</button>
-
-    </header>
-
-    <main class="container">
-        <h1 class="page-title">MY WATCH LATER LIST</h1>
-
-        <!-- Lists -->
-        <section class="lists-box">
-            <div class="list-column">
-                <h2>Priority Watchlist</h2>
-                <ol class="custom-list">
-                    <li>Dune: Part Two (Review)</li>
-                    <li>The Last of Us Season 2</li>
-                    <li>Oppenheimer Analysis</li>
-                </ol>
-            </div>
-
-            <div class="list-column">
-                <h2>Categories</h2>
-                <ul class="custom-list">
-                    <li>Horror Night Picks</li>
-                    <li>Sci-Fi Masterpieces</li>
-                    <li>Director's Cut Reviews</li>
-                </ul>
-            </div>
-        </section>
-
-
-        <h2 class="section-title">SAVED MOVIES</h2>
-
-
-        <table class="data-table">
-            <thead>
-            <tr>
-                <th>TITLE</th>
-                <th>GENRE</th>
-                <th>YEAR</th>
-            </tr>
-            </thead>
-
-            <tbody id="movie-table">
-            </tbody>
-        </table>
-        
-        <section class="author-section">
-            <div class="author-bio">
+        <!-- MAIN CONTENT (TASK 3) -->
+        <main class="container">
+            <h1 class="section-title">MY WATCH LATER LIST</h1>
+            
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>TITLE</th>
+                        <th>GENRE</th>
+                        <th>YEAR</th>
+                    </tr>
+                </thead>
+                <tbody id="movie-table"></tbody>
+            </table>
+            
+            <!-- ABOUT DEVELOPER -->
+            <section class="author-section">
                 <h2>ABOUT THE DEVELOPER</h2>
-                <p>Hi! I'm Darina Sagiyeva, a Software Engineering student 
-                    at Astana IT University (Group SE-2506). I developed 
-                    the Catalog and Watch Later sections for this movie platform.</p>
+                <p>Hi! I'm Darina Sagiyeva, a Software Engineering student at Astana IT University (Group SE-2506). 
+                    I developed the Catalog and Watch Later sections for this movie platform.</p>
+            </section>
+
+            <!-- CONTACTилер -->
+            <section class="form-box">
+                <h2>SUGGEST A MOVIE / CONTACT US</h2>
+                <form id="contact-form">
+                    <label for="username">Your Name</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your full name" required>
+
+                    <label for="user-email">Your Email</label>
+                    <input type="email" id="user-email" name="user-email" placeholder="example@mail.com" required>
+
+                    <label for="color">Select Highlight Color</label>
+                    <input type="color" id="color" value="#e50914">
+
+                    <label for="category">Genre Category</label>
+                    <select id="category" name="category">
+                        <option value="horror">Horror</option>
+                        <option value="scifi">Sci-Fi</option>
+                        <option value="action">Action</option>
+                        <option value="drama">Drama</option>
+                    </select>
+
+                    <label for="message">Message / Movie Suggestion</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Type movie title or review request..."></textarea>
+
+                    <button type="submit" class="btn-submit">SUBMIT REQUEST</button>
+                </form>
+            </section>
+        </main>
+
+        <!-- FOOTER (TASK 3) -->
+        <footer class="site-footer">
+            <div class="footer-left">
+                <span class="footer-dot"></span>
+                <p>MOVIE PROJECT</p>
             </div>
-        </section>
-      
+            <p class="footer-right">CREATED BY ZHAMILA BAPAN & DARINA SAGIYEVA</p>
+        </footer>
+    </div>
 
-
-        <section class="form-box">
-            <h2>SUGGEST A MOVIE / CONTACT US</h2>
-            <form id="contact-form">
-                <label for="username">Your Name</label>
-                <input type="text" id="username" name="username" placeholder="Enter your full name" required>
-
-                <label for="user-email">Your Email</label>
-                <input type="email" id="user-email" name="user-email" placeholder="example@mail.com" required>
-
-                <label for="fav-color">Select Highlight Color</label>
-                <input type="color" id="fav-color" name="fav-color" value="#d90429">
-
-                <label for="category">Genre Category</label>
-                <select id="category" name="category">
-                    <option value="horror">Horror</option>
-                    <option value="scifi">Sci-Fi</option>
-                    <option value="action">Action</option>
-                </select>
-
-                <label for="message">Message / Movie Suggestion</label>
-                <textarea id="message" name="message" rows="4" placeholder="Type movie title or review request..."></textarea>
-
-                <button type="submit" class="btn-submit">SUBMIT REQUEST</button>
-            </form>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="site-footer">
-
-        <div class="footer-left">
-            <span class="footer-dot"></span>
-            <p>MOVIE PROJECT</p>
-        </div>
-
-        <p class="footer-right">
-            CREATED BY ZHAMILA BAPAN & DARINA SAGIYEVA
-        </p>
-
-    </footer>
-
+    <!-- RENDER WATCH LATER LIST FROM LOCALSTORAGE, ждэс -->
     <script>
     let movies = JSON.parse(localStorage.getItem("watchLater")) || [];
     let table = document.getElementById("movie-table");
-
     for (let i = 0; i < movies.length; i++) {
         table.innerHTML += `
             <tr>
@@ -133,8 +102,11 @@
             </tr>
         `;
     }
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
 
+
+event.preventDefault();
+    });
     </script>
-
 </body>
 </html>
