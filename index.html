@@ -4,67 +4,156 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | MOVIE PROJECT</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body class="home-page">
-    <div class="grid-container">
-        <!-- HEADER (FLEXBOX - TASK 1) -->
-        <header id="main-header">
-            <div class="logo">MOVIE PROJECT</div>
-            <nav class="nav-menu">
-                <a href="index.html" class="active">Home</a>
-                <a href="catalog.html">Catalog</a>
-                <a href="watch-later.html">Watch Later</a>
-                <a href="favorites.html">Favorites</a>
-            </nav>
-            <div class="user-action">
-                <button class="btn-pill" type="button">LOG IN</button>
-            </div>
-        </header>
+<div class="grid-container">
 
-        <!-- SIDEBAR (GRID AREA - TASK 3) -->
-        <aside class="site-sidebar">
-            <h3>NAVIGATION</h3>
-            <br>
-            <p><a href="index.html" style="color: #a5a2a2; text-decoration: none;">• Home Overview</a></p><br>
-            <p><a href="catalog.html" style="color: #a5a2a2; text-decoration: none;">• Explore Movies</a></p>
-        </aside>
+<nav class="navbar navbar-expand-lg navbar-dark movie-navbar px-3 px-lg-4">
+    <div class="container-fluid">
+        <a class="navbar-brand logo" href="index.html">MOVIE PROJECT</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-label="Open navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-        <!-- MAIN CONTENT (GRID AREA - TASK 3) -->
-        <main class="home-container">
-            <!-- МАСКИ буууу страшшнаа-->
-            <div class="masks-container">
-                <img src="images/mask1.png" class="mask" alt="Theatre mask 1">
-                <img src="images/mask2.png" class="mask" alt="Theatre mask 2">
-                <img src="images/mask3.png" class="mask" alt="Theatre mask 3">
-                <img src="images/mask4.png" class="mask" alt="Theatre mask 4">
-                <img src="images/mask5.png" class="mask" alt="Theatre mask 5">
-            </div>
+        <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="catalog.html">Catalog</a></li>
+                <li class="nav-item"><a class="nav-link" href="watch-later.html">Watch Later</a></li>
+                <li class="nav-item"><a class="nav-link" href="favorites.html">Favorites</a></li>
+            </ul>
 
-            <!-- HERO SECTION -->
-            <section class="hero-content">
-                <p class="hero-subtitle">YOUR PERSONAL MOVIE SPACE</p>
-                <h1 class="hero-title">
-                    WATCH AND<br>
-                    ENJOY THE<br>
-                    <span class="highlight">MOVIES.</span>
-                </h1>
-                <p class="hero-description">
-                    Discover the movie that will become your favorite. Explore popular films, classics, 
-                    and true cinematic gems right here. Search by title or genre, discover new stories, 
-                    and save the movies you like. Find something worth watching.
-                </p>
-            </section>
-        </main>
-
-        <!-- FOOTER (GRID AREA - TASK 3) -->
-        <footer class="site-footer">
-            <div class="footer-left">
-                <span class="footer-dot"></span>
-                <p>MOVIE PROJECT</p>
-            </div>
-            <p class="footer-right">CREATED BY ZHAMILA BAPAN & DARINA SAGIYEVA</p>
-        </footer>
+            <button class="btn btn-danger btn-sm rounded-pill px-4 ms-3">
+                LOG IN
+            </button>
+        </div>
     </div>
+</nav>
+
+<aside class="site-sidebar p-4">
+    <h3>NAVIGATION</h3>
+    <p class="mt-3"><a href="index.html">• Home Overview</a></p>
+    <p class="mt-3"><a href="catalog.html">• Explore Movies</a></p>
+</aside>
+
+<main class="home-container p-3 p-lg-4">
+<div class="container-fluid p-0">
+
+    <div class="masks-container flex-wrap gap-3 mb-5">
+        <img src="images/mask1.png" class="mask" alt="Mask 1">
+        <img src="images/mask2.png" class="mask" alt="Mask 2">
+        <img src="images/mask3.png" class="mask" alt="Mask 3">
+        <img src="images/mask4.png" class="mask" alt="Mask 4">
+        <img src="images/mask5.png" class="mask" alt="Mask 5">
+    </div>
+
+    <section class="row g-4 align-items-center mb-5">
+        <div class="col-12 col-md-12 col-lg-6">
+            <p class="hero-subtitle">YOUR PERSONAL MOVIE SPACE</p>
+
+            <h1 class="hero-title">
+                WATCH AND<br>
+                ENJOY THE<br>
+                <span class="highlight">MOVIES.</span>
+            </h1>
+
+            <p class="hero-description">
+                Discover the movie that will become your favorite.
+                Explore popular films, classics and true cinematic gems.
+                Search by title or genre and save the movies you like.
+            </p>
+        </div>
+
+        <div class="col-12 col-md-12 col-lg-10">
+            <h2 class="section-title mb-3">TRAILER: "THE HUNGER GAMES: SUNRISE ON THE REAPING"</h2>
+
+            <video class="movie-video rounded" controls>
+                <source src="video/THE HUNGER GAMES.mp4" type="video/mp4">
+            </video>
+        </div>
+    </section>
+
+    <section class="mb-5">
+        <h2 class="section-title mb-3">NEW FILMS IN 2026</h2>
+
+        <div id="movieCarousel" class="carousel slide">
+            <div class="carousel-indicators">
+                <button data-bs-target="#movieCarousel" data-bs-slide-to="0" class="active"></button>
+                <button data-bs-target="#movieCarousel" data-bs-slide-to="1"></button>
+                <button data-bs-target="#movieCarousel" data-bs-slide-to="2"></button>
+                <button data-bs-target="#movieCarousel" data-bs-slide-to="3"></button>
+                <button data-bs-target="#movieCarousel" data-bs-slide-to="4"></button>
+                <button data-bs-target="#movieCarousel" data-bs-slide-to="5"></button>
+                <button data-bs-target="#movieCarousel" data-bs-slide-to="6"></button>
+                <button data-bs-target="#movieCarousel" data-bs-slide-to="7"></button>
+                <button data-bs-target="#movieCarousel" data-bs-slide-to="8"></button>
+            </div>
+
+            <div class="carousel-inner rounded">
+                <div class="carousel-item active">
+                    <img src="images/Resident Evil.jpg" class="carousel-img" alt="Resident Evil">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="images/dune III.jpg" class="carousel-img" alt="dune III">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="images/the-batman.jpg" class="carousel-img" alt="the-batman">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="images/Jumanji.jpg" class="carousel-img" alt="Jumanji">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="images/Avengers Final.jpg" class="carousel-img" alt="Avengers Final">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="images/Angry Birds.jpg" class="carousel-img" alt="Angry Birds">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="images/Tom and Jerry.jpg" class="carousel-img" alt="Tom and Jerry">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="images/Avengers Doomsday.jpg" class="carousel-img" alt="Avengers Doomsday">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="images/The Hunger Games.jpg" class="carousel-img" alt="The Hunger Games">
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" data-bs-target="#movieCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+
+            <button class="carousel-control-next" data-bs-target="#movieCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </section>
+
+</div>
+</main>
+
+<footer class="site-footer py-3 px-4">
+    <div class="footer-left">
+        <span class="footer-dot"></span>
+        <p class="mb-0">MOVIE PROJECT</p>
+    </div>
+
+    <p class="mb-0">CREATED BY ZHAMILA BAPAN & DARINA SAGIYEVA</p>
+</footer>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
