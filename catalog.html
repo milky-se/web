@@ -5,200 +5,243 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catalog | MOVIE PROJECT</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
 </head>
 
-<body>
-<div class="grid-container">
+<body class="bg-black text-white">
+<div class="min-vh-100 d-flex flex-column">
 
-<nav class="navbar navbar-expand-lg navbar-dark movie-navbar px-3 px-lg-4">
-    <div class="container-fluid">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark movie-navbar px-3 px-lg-4">
+    <div class="container-fluid p-0">
         <a class="navbar-brand logo" href="index.html">MOVIE PROJECT</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-label="Open navigation">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+                aria-controls="navbarMenu" aria-expanded="false" aria-label="Open navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarMenu">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav ms-lg-auto">
                 <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="catalog.html">Catalog</a></li>
+                <li class="nav-item"><a class="nav-link active" href="catalog.html">Catalog</a></li>
                 <li class="nav-item"><a class="nav-link" href="watch-later.html">Watch Later</a></li>
                 <li class="nav-item"><a class="nav-link" href="favorites.html">Favorites</a></li>
             </ul>
 
-            <button class="btn btn-danger btn-sm rounded-pill px-4 ms-3">
-                LOG IN
-            </button>
+            <button class="btn btn-danger btn-sm rounded-pill px-4 mt-3 mt-lg-0 ms-lg-3">LOG IN</button>
         </div>
     </div>
 </nav>
 
-<aside class="site-sidebar p-4">
-    <h3>GENRES</h3>
-    <p class="mt-3"><a href="#">• Action</a></p>
-    <p class="mt-3"><a href="#">• Sci-Fi</a></p>
-    <p class="mt-3"><a href="#">• Horror</a></p>
-    <p class="mt-3"><a href="#">• Drama</a></p>
-    <p class="mt-3"><a href="#">• Fantasy</a></p>
+<div class="container-fluid flex-grow-1 p-0">
+<div class="row g-0 h-100">
+
+<aside class="site-sidebar col-12 col-lg-2 bg-dark border-end border-secondary p-4">
+    <h3 class="fs-5">GENRES</h3>
+    <p class="mt-3 mb-0"><a href="#" class="text-secondary text-decoration-none">• Action</a></p>
+    <p class="mt-3 mb-0"><a href="#" class="text-secondary text-decoration-none">• Sci-Fi</a></p>
+    <p class="mt-3 mb-0"><a href="#" class="text-secondary text-decoration-none">• Horror</a></p>
+    <p class="mt-3 mb-0"><a href="#" class="text-secondary text-decoration-none">• Drama</a></p>
+    <p class="mt-3 mb-0"><a href="#" class="text-secondary text-decoration-none">• Fantasy</a></p>
 </aside>
 
-<main class="main-content p-3 p-lg-4">
+<main class="main-content col-12 col-lg-10 px-3 px-lg-4 py-4">
 <div class="container-fluid p-0">
 
-<section class="genre-tags mb-4">
-    <span class="tag px-2 py-1">ADVENTURE</span>
-    <span class="tag px-2 py-1">ROMANTIC</span>
-    <span class="tag px-2 py-1">FANTASY</span>
-    <span class="tag active-tag px-2 py-1">ACTION</span>
-    <span class="tag px-2 py-1">HORROR</span>
-    <span class="tag px-2 py-1">COMEDY</span>
+<section class="mb-4">
+    <div class="d-flex flex-wrap gap-2">
+        <button class="btn btn-outline-secondary btn-sm rounded-pill px-3">ADVENTURE</button>
+        <button class="btn btn-outline-secondary btn-sm rounded-pill px-3">ROMANTIC</button>
+        <button class="btn btn-outline-secondary btn-sm rounded-pill px-3">FANTASY</button>
+        <button class="btn btn-danger btn-sm rounded-pill px-3">ACTION</button>
+        <button class="btn btn-outline-secondary btn-sm rounded-pill px-3">HORROR</button>
+        <button class="btn btn-outline-secondary btn-sm rounded-pill px-3">COMEDY</button>
+    </div>
 </section>
 
-<section>
-    <h1 class="section-title mb-4">RECOMMENDED | TOP MOVIES</h1>
+<section class="mb-5">
+    <h1 class="section-title text-danger fs-5 mb-4">RECOMMENDED | TOP MOVIES</h1>
 
-    <div class="cards-flex-container">
+    <!-- CSS MEDIA QUERY CARDS -->
+    <div class="media-cards mb-4">
 
-        <div class="movie-card p-3">
-            <img src="images/interstellar.jpg" alt="Interstellar">
-            <h3 class="mt-2">Interstellar</h3>
-            <p class="mt-1">2014 • 2h 49m</p>
+        <div class="media-card">
+            <img src="images/interstellar.jpg" width="300" height="220" alt="Interstellar">
 
-            <div class="btn-group w-100 mt-3">
-                <button class="btn btn-outline-danger btn-sm"
-                onclick="saveMovie('favorites','Interstellar','2014','Sci-Fi / Drama')">♡</button>
+            <div>
+                <h3>Interstellar</h3>
+                <p>2014 • 2h 49m</p>
 
-                <button class="btn btn-outline-light btn-sm"
-                onclick="saveMovie('watchLater','Interstellar','2014','Sci-Fi / Drama')">◷</button>
+                <div class="btn-group">
+                    <button class="btn btn-outline-danger btn-sm"
+                            onclick="saveMovie('favorites','Interstellar','2014','Sci-Fi / Drama')">♡</button>
+
+                    <button class="btn btn-outline-light btn-sm"
+                            onclick="saveMovie('watchLater','Interstellar','2014','Sci-Fi / Drama')">◷</button>
+                </div>
             </div>
         </div>
 
-        <div class="movie-card p-3">
-            <img src="images/inception.jpg" alt="Inception">
-            <h3 class="mt-2">Inception</h3>
-            <p class="mt-1">2010 • 2h 28m</p>
+        <div class="media-card">
+            <img src="images/inception.jpg" width="300" height="220" alt="Inception">
 
-            <div class="btn-group w-100 mt-3">
-                <button class="btn btn-outline-danger btn-sm"
-                onclick="saveMovie('favorites','Inception','2010','Action / Sci-Fi')">♡</button>
+            <div>
+                <h3>Inception</h3>
+                <p>2010 • 2h 28m</p>
 
-                <button class="btn btn-outline-light btn-sm"
-                onclick="saveMovie('watchLater','Inception','2010','Action / Sci-Fi')">◷</button>
+                <div class="btn-group">
+                    <button class="btn btn-outline-danger btn-sm"
+                            onclick="saveMovie('favorites','Inception','2010','Action / Sci-Fi')">♡</button>
+
+                    <button class="btn btn-outline-light btn-sm"
+                            onclick="saveMovie('watchLater','Inception','2010','Action / Sci-Fi')">◷</button>
+                </div>
             </div>
         </div>
 
-        <div class="movie-card p-3">
-            <img src="images/dune.jpg" alt="Dune">
-            <h3 class="mt-2">Dune: Part Two</h3>
-            <p class="mt-1">2024 • 2h 46m</p>
+        <div class="media-card">
+            <img src="images/dune.jpg" width="300" height="220" alt="Dune">
 
-            <div class="btn-group w-100 mt-3">
-                <button class="btn btn-outline-danger btn-sm"
-                onclick="saveMovie('favorites','Dune: Part Two','2024','Sci-Fi / Adventure')">♡</button>
+            <div>
+                <h3>Dune: Part Two</h3>
+                <p>2024 • 2h 46m</p>
 
-                <button class="btn btn-outline-light btn-sm"
-                onclick="saveMovie('watchLater','Dune: Part Two','2024','Sci-Fi / Adventure')">◷</button>
-            </div>
-        </div>
+                <div class="btn-group">
+                    <button class="btn btn-outline-danger btn-sm"
+                            onclick="saveMovie('favorites','Dune: Part Two','2024','Sci-Fi / Adventure')">♡</button>
 
-        <div class="movie-card p-3">
-            <img src="images/oppenheimer.jpg" alt="Oppenheimer">
-            <h3 class="mt-2">Oppenheimer</h3>
-            <p class="mt-1">2023 • 3h</p>
-
-            <div class="btn-group w-100 mt-3">
-                <button class="btn btn-outline-danger btn-sm"
-                onclick="saveMovie('favorites','Oppenheimer','2023','Drama / History')">♡</button>
-
-                <button class="btn btn-outline-light btn-sm"
-                onclick="saveMovie('watchLater','Oppenheimer','2023','Drama / History')">◷</button>
-            </div>
-        </div>
-
-        <div class="movie-card p-3">
-            <img src="images/the-batman.jpg" alt="The Batman">
-            <h3 class="mt-2">The Batman</h3>
-            <p class="mt-1">2022 • 2h 56m</p>
-
-            <div class="btn-group w-100 mt-3">
-                <button class="btn btn-outline-danger btn-sm"
-                onclick="saveMovie('favorites','The Batman','2022','Action / Crime')">♡</button>
-
-                <button class="btn btn-outline-light btn-sm"
-                onclick="saveMovie('watchLater','The Batman','2022','Action / Crime')">◷</button>
-            </div>
-        </div>
-
-        <div class="movie-card p-3">
-            <img src="images/harry-potter.jpg" alt="Harry Potter">
-            <h3 class="mt-2">Harry Potter 1</h3>
-            <p class="mt-1">2001 • 2h 32m</p>
-
-            <div class="btn-group w-100 mt-3">
-                <button class="btn btn-outline-danger btn-sm"
-                onclick="saveMovie('favorites','Harry Potter 1','2001','Fantasy / Adventure')">♡</button>
-
-                <button class="btn btn-outline-light btn-sm"
-                onclick="saveMovie('watchLater','Harry Potter 1','2001','Fantasy / Adventure')">◷</button>
+                    <button class="btn btn-outline-light btn-sm"
+                            onclick="saveMovie('watchLater','Dune: Part Two','2024','Sci-Fi / Adventure')">◷</button>
+                </div>
             </div>
         </div>
 
     </div>
 
-    <div class="row g-3 mt-1">
+    <!-- BOOTSTRAP CARDS -->
+    <div class="row g-4">
 
         <div class="col-12 col-md-6 col-lg-4">
-            <div class="card bootstrap-card h-100">
-                <img src="images/pirates3.jpg" class="card-img-top" alt="Pirates of the Caribbean">
+            <div class="card bootstrap-card bg-dark text-white border-secondary h-100">
+                <div class="ratio ratio-4x3">
+                    <img src="images/oppenheimer.jpg" class="w-100 h-100 object-fit-cover" alt="Oppenheimer">
+                </div>
+
+                <div class="card-body">
+                    <h3 class="card-title h5">Oppenheimer</h3>
+                    <p class="card-text">2023 • 3h</p>
+
+                    <div class="btn-group w-100">
+                        <button class="btn btn-outline-danger btn-sm"
+                                onclick="saveMovie('favorites','Oppenheimer','2023','Drama / History')">♡</button>
+
+                        <button class="btn btn-outline-light btn-sm"
+                                onclick="saveMovie('watchLater','Oppenheimer','2023','Drama / History')">◷</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card bootstrap-card bg-dark text-white border-secondary h-100">
+                <div class="ratio ratio-4x3">
+                    <img src="images/the-batman.jpg" class="w-100 h-100 object-fit-cover" alt="The Batman">
+                </div>
+
+                <div class="card-body">
+                    <h3 class="card-title h5">The Batman</h3>
+                    <p class="card-text">2022 • 2h 56m</p>
+
+                    <div class="btn-group w-100">
+                        <button class="btn btn-outline-danger btn-sm"
+                                onclick="saveMovie('favorites','The Batman','2022','Action / Crime')">♡</button>
+
+                        <button class="btn btn-outline-light btn-sm"
+                                onclick="saveMovie('watchLater','The Batman','2022','Action / Crime')">◷</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card bootstrap-card bg-dark text-white border-secondary h-100">
+                <div class="ratio ratio-4x3">
+                    <img src="images/harry-potter.jpg" class="w-100 h-100 object-fit-cover" alt="Harry Potter">
+                </div>
+
+                <div class="card-body">
+                    <h3 class="card-title h5">Harry Potter 1</h3>
+                    <p class="card-text">2001 • 2h 32m</p>
+
+                    <div class="btn-group w-100">
+                        <button class="btn btn-outline-danger btn-sm"
+                                onclick="saveMovie('favorites','Harry Potter 1','2001','Fantasy / Adventure')">♡</button>
+
+                        <button class="btn btn-outline-light btn-sm"
+                                onclick="saveMovie('watchLater','Harry Potter 1','2001','Fantasy / Adventure')">◷</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card bootstrap-card bg-dark text-white border-secondary h-100">
+                <div class="ratio ratio-4x3">
+                    <img src="images/pirates3.jpg" class="w-100 h-100 object-fit-cover" alt="Pirates">
+                </div>
 
                 <div class="card-body">
                     <h3 class="card-title h5">Pirates of the Caribbean 3</h3>
                     <p class="card-text">2007 • 2h 49m</p>
 
-                    <div class="btn-group w-100 mt-3">
+                    <div class="btn-group w-100">
                         <button class="btn btn-outline-danger btn-sm"
-                        onclick="saveMovie('favorites','Pirates of the Caribbean 3','2007','Action / Adventure')">♡</button>
+                                onclick="saveMovie('favorites','Pirates of the Caribbean 3','2007','Action / Adventure')">♡</button>
 
                         <button class="btn btn-outline-light btn-sm"
-                        onclick="saveMovie('watchLater','Pirates of the Caribbean 3','2007','Action / Adventure')">◷</button>
+                                onclick="saveMovie('watchLater','Pirates of the Caribbean 3','2007','Action / Adventure')">◷</button>
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="col-12 col-md-6 col-lg-4">
-            <div class="card bootstrap-card h-100">
-                <img src="images/jurassic-park.jpg" class="card-img-top" alt="Jurassic Park">
+            <div class="card bootstrap-card bg-dark text-white border-secondary h-100">
+                <div class="ratio ratio-4x3">
+                    <img src="images/jurassic-park.jpg" class="w-100 h-100 object-fit-cover" alt="Jurassic Park">
+                </div>
 
                 <div class="card-body">
                     <h3 class="card-title h5">Jurassic Park 1</h3>
                     <p class="card-text">1993 • 2h 07m</p>
 
-                    <div class="btn-group w-100 mt-3">
+                    <div class="btn-group w-100">
                         <button class="btn btn-outline-danger btn-sm"
-                        onclick="saveMovie('favorites','Jurassic Park 1','1993','Sci-Fi / Adventure')">♡</button>
+                                onclick="saveMovie('favorites','Jurassic Park 1','1993','Sci-Fi / Adventure')">♡</button>
 
                         <button class="btn btn-outline-light btn-sm"
-                        onclick="saveMovie('watchLater','Jurassic Park 1','1993','Sci-Fi / Adventure')">◷</button>
+                                onclick="saveMovie('watchLater','Jurassic Park 1','1993','Sci-Fi / Adventure')">◷</button>
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="col-12 col-md-6 col-lg-4">
-            <div class="card bootstrap-card h-100">
-                <img src="images/lalaland.jpg" class="card-img-top" alt="La La Land">
+            <div class="card bootstrap-card bg-dark text-white border-secondary h-100">
+                <div class="ratio ratio-4x3">
+                    <img src="images/lalaland.jpg" class="w-100 h-100 object-fit-cover" alt="La La Land">
+                </div>
 
                 <div class="card-body">
                     <h3 class="card-title h5">La La Land</h3>
                     <p class="card-text">2016 • 2h 08m</p>
 
-                    <div class="btn-group w-100 mt-3">
+                    <div class="btn-group w-100">
                         <button class="btn btn-outline-danger btn-sm"
-                        onclick="saveMovie('favorites','La La Land','2016','Comedy / Drama / Music')">♡</button>
+                                onclick="saveMovie('favorites','La La Land','2016','Comedy / Drama / Music')">♡</button>
 
                         <button class="btn btn-outline-light btn-sm"
-                        onclick="saveMovie('watchLater','La La Land','2016','Comedy / Drama / Music')">◷</button>
+                                onclick="saveMovie('watchLater','La La Land','2016','Comedy / Drama / Music')">◷</button>
                     </div>
                 </div>
             </div>
@@ -208,61 +251,97 @@
 </section>
 
 <section class="my-5">
-    <h2 class="section-title mb-3">MOVIE SHOTS GALLERY</h2>
+    <h2 class="section-title text-danger fs-5 mb-3">MOVIE SHOTS GALLERY</h2>
 
-    <div class="image-gallery">
-        <div class="gallery-item">
-            <img src="images/interstellar.jpg" alt="Interstellar">
-            <div class="gallery-overlay p-2">Interstellar</div>
+    <div class="row g-3">
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="gallery-item position-relative overflow-hidden rounded">
+                <div class="ratio ratio-16x9">
+                    <img src="images/interstellar.jpg" class="w-100 h-100 object-fit-cover" alt="Interstellar">
+                </div>
+                <div class="gallery-overlay position-absolute bottom-0 start-0 w-100 bg-danger text-white text-center p-2">Interstellar</div>
+            </div>
         </div>
 
-        <div class="gallery-item">
-            <img src="images/inception.jpg" alt="Inception">
-            <div class="gallery-overlay p-2">Inception</div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="gallery-item position-relative overflow-hidden rounded">
+                <div class="ratio ratio-16x9">
+                    <img src="images/inception.jpg" class="w-100 h-100 object-fit-cover" alt="Inception">
+                </div>
+                <div class="gallery-overlay position-absolute bottom-0 start-0 w-100 bg-danger text-white text-center p-2">Inception</div>
+            </div>
         </div>
 
-        <div class="gallery-item">
-            <img src="images/dune.jpg" alt="Dune">
-            <div class="gallery-overlay p-2">Dune</div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="gallery-item position-relative overflow-hidden rounded">
+                <div class="ratio ratio-16x9">
+                    <img src="images/dune.jpg" class="w-100 h-100 object-fit-cover" alt="Dune">
+                </div>
+                <div class="gallery-overlay position-absolute bottom-0 start-0 w-100 bg-danger text-white text-center p-2">Dune</div>
+            </div>
         </div>
 
-        <div class="gallery-item">
-            <img src="images/oppenheimer.jpg" alt="Oppenheimer">
-            <div class="gallery-overlay p-2">Oppenheimer</div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="gallery-item position-relative overflow-hidden rounded">
+                <div class="ratio ratio-16x9">
+                    <img src="images/oppenheimer.jpg" class="w-100 h-100 object-fit-cover" alt="Oppenheimer">
+                </div>
+                <div class="gallery-overlay position-absolute bottom-0 start-0 w-100 bg-danger text-white text-center p-2">Oppenheimer</div>
+            </div>
         </div>
 
-        <div class="gallery-item">
-            <img src="images/the-batman.jpg" alt="The Batman">
-            <div class="gallery-overlay p-2">The Batman</div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="gallery-item position-relative overflow-hidden rounded">
+                <div class="ratio ratio-16x9">
+                    <img src="images/the-batman.jpg" class="w-100 h-100 object-fit-cover" alt="The Batman">
+                </div>
+                <div class="gallery-overlay position-absolute bottom-0 start-0 w-100 bg-danger text-white text-center p-2">The Batman</div>
+            </div>
         </div>
 
-        <div class="gallery-item">
-            <img src="images/harry-potter.jpg" alt="Harry Potter">
-            <div class="gallery-overlay p-2">Harry Potter</div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="gallery-item position-relative overflow-hidden rounded">
+                <div class="ratio ratio-16x9">
+                    <img src="images/harry-potter.jpg" class="w-100 h-100 object-fit-cover" alt="Harry Potter">
+                </div>
+                <div class="gallery-overlay position-absolute bottom-0 start-0 w-100 bg-danger text-white text-center p-2">Harry Potter</div>
+            </div>
         </div>
 
-        <div class="gallery-item">
-            <img src="images/pirates3.jpg" alt="Pirates">
-            <div class="gallery-overlay p-2">Pirates of the Caribbean</div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="gallery-item position-relative overflow-hidden rounded">
+                <div class="ratio ratio-16x9">
+                    <img src="images/pirates3.jpg" class="w-100 h-100 object-fit-cover" alt="Pirates">
+                </div>
+                <div class="gallery-overlay position-absolute bottom-0 start-0 w-100 bg-danger text-white text-center p-2">Pirates of the Caribbean</div>
+            </div>
         </div>
 
-        <div class="gallery-item">
-            <img src="images/jurassic-park.jpg" alt="Jurassic Park">
-            <div class="gallery-overlay p-2">Jurassic Park</div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="gallery-item position-relative overflow-hidden rounded">
+                <div class="ratio ratio-16x9">
+                    <img src="images/jurassic-park.jpg" class="w-100 h-100 object-fit-cover" alt="Jurassic Park">
+                </div>
+                <div class="gallery-overlay position-absolute bottom-0 start-0 w-100 bg-danger text-white text-center p-2">Jurassic Park</div>
+            </div>
         </div>
 
-        <div class="gallery-item">
-            <img src="images/lalaland.jpg" alt="La La Land">
-            <div class="gallery-overlay p-2">La La Land</div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="gallery-item position-relative overflow-hidden rounded">
+                <div class="ratio ratio-16x9">
+                    <img src="images/lalaland.jpg" class="w-100 h-100 object-fit-cover" alt="La La Land">
+                </div>
+                <div class="gallery-overlay position-absolute bottom-0 start-0 w-100 bg-danger text-white text-center p-2">La La Land</div>
+            </div>
         </div>
     </div>
 </section>
 
-<section class="mb-4">
-    <h2 class="section-title mb-3">ALL AVAILABLE REVIEWS</h2>
+<section class="mb-5">
+    <h2 class="section-title text-danger fs-5 mb-3">ALL AVAILABLE REVIEWS</h2>
 
     <div class="table-responsive">
-        <table class="data-table">
+        <table class="table table-dark table-hover data-table align-middle mb-0">
             <thead>
                 <tr>
                     <th class="p-3">TITLE</th>
@@ -279,14 +358,12 @@
                     <td class="p-3">2008</td>
                     <td class="p-3">9.0</td>
                 </tr>
-
                 <tr>
                     <td class="p-3">Interstellar</td>
                     <td class="p-3">Sci-Fi / Drama</td>
                     <td class="p-3">2014</td>
                     <td class="p-3">8.7</td>
                 </tr>
-
                 <tr>
                     <td class="p-3">Inception</td>
                     <td class="p-3">Action / Sci-Fi</td>
@@ -300,14 +377,13 @@
 
 </div>
 </main>
+</div>
+</div>
 
-<footer class="site-footer py-3 px-4">
-    <div class="footer-left">
-        <span class="footer-dot"></span>
-        <p class="mb-0">MOVIE PROJECT</p>
-    </div>
-
-    <p class="mb-0">CREATED BY ZHAMILA BAPAN & DARINA SAGIYEVA</p>
+<footer class="site-footer bg-dark border-top border-secondary d-flex flex-column flex-md-row
+               justify-content-between align-items-center gap-2 py-3 px-4 text-secondary">
+    <p class="mb-0">MOVIE PROJECT</p>
+    <p class="mb-0 text-center">CREATED BY ZHAMILA BAPAN & DARINA SAGIYEVA</p>
 </footer>
 
 </div>
@@ -333,6 +409,5 @@ function saveMovie(list, title, year, genre) {
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>
