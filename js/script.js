@@ -22,7 +22,7 @@ function saveMovie(list, title, year, genre) {
 }
 
 // Change background
-let colors = ["#090c0f", "#141e30", "#1a1018", "#112020"];
+let colors = ["#090c0f", "#12254a", "#1f371d", "#5c0101"];
 let colorIndex = 0;
 
 function changeBackgroundColor() {
